@@ -5,6 +5,7 @@
 soong_namespace {
     imports: [
         "device/xiaomi/miuicamera-topaz",
+        "vendor/xiaomi/miuicamera-topaz",
     ],
 }
 
@@ -167,4 +168,16 @@ android_app_import {
         enabled: false,
     },
     privileged: true,
+}
+
+android_app_import {
+    name: "ExtraPhotoGlobal",
+    owner: "xiaomi",
+    apk: "proprietary/product/priv-app/ExtraPhotoGlobal/ExtraPhotoGlobal.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    product_specific: true,
 }
